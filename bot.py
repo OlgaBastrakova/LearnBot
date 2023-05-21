@@ -1,3 +1,4 @@
+
 import logging
 logging.basicConfig(filename='bot.log', level=logging.INFO)
 import settings
@@ -12,6 +13,7 @@ def talk_to_me(update, context):
     user_text = update.message.text 
     print(user_text)
     update.message.reply_text(user_text)
+
 
 def main():
     mybot = Updater(settings.API_KEY, use_context=True)
